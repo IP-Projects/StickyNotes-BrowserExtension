@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Sticky Notes",
+    "version": "1.0.3",
+    "description": "Add notes and comments whenever, wherever",
+    "default_locale": "en",
+    "icons": {
+        "128": "./assets/images/sticky_notes_124x124.jpg"
+    },
+    "background": {
+        "scripts": ["./background/background.js"]
+    },
+    "browser_action": {
+        "default_title": "Sticky Note",
+        "default_icon": "./assets/images/sticky_notes_124x124.jpg",
+        "default_popup": "./popup/popup.html"
+    },
+    "content_scripts": [
+        {
+            "run_at": "document_end",
+            "matches": ["<all_urls>"],
+            "js": ["./content_script/content_script.js"]
+        }
+    ],
+    "permissions": ["contextMenus", "storage"],
+    "web_accessible_resources": ["popup/popup.html"]
+}

@@ -1,0 +1,161 @@
+{
+    "parser": "@typescript-eslint/parser",
+
+    "extends": [
+        "eslint:recommended",
+        "plugin:import/recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "prettier/react",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": ["import", "react", "prettier", "@typescript-eslint", "react-hooks"],
+
+    "parserOptions": {
+        "ecmaVersion": 2021,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "modules": true,
+            "tsx": true
+        },
+        "settings": {
+            "react": {
+                "version": "detect"
+            }
+        }
+    },
+    "rules": {
+        // Important - Turn on after fixing all of them
+        "no-var": "warn",
+        "prettier/prettier": "warn",
+        "react/no-direct-mutation-state": "warn",
+        "@typescript-eslint/no-empty-interface": "warn",
+        "@typescript-eslint/consistent-type-assertions": "warn",
+        "no-constant-condition": "warn",
+        "react/no-deprecated": "warn",
+        "no-empty": "off",
+        "react/jsx-tag-spacing": ["warn", { "beforeSelfClosing": "always" }],
+        "@typescript-eslint/no-empty-function": "warn",
+        "@typescript-eslint/no-this-alias": "warn",
+        "@typescript-eslint/no-var-requires": "warn",
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/ban-types": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "no-prototype-builtins": "off",
+        "no-console": "off",
+
+        "semi": "off",
+        "eqeqeq": ["warn", "always"],
+        "quotes": ["warn", "single"],
+        "jsx-quotes": ["error", "prefer-double"],
+        "no-undef": "off",
+        "no-unused-vars": "off",
+        "no-mixed-operators": "off",
+        "eol-last": ["error", "always"],
+        "no-confusing-arrow": "off",
+        "arrow-parens": ["warn", "always"],
+        "arrow-spacing": ["error", { "before": true, "after": true }],
+        "arrow-body-style": "off", //["error", "as-needed"],
+        "no-case-declarations": "off",
+        "no-param-reassign": "off",
+        "no-extra-boolean-cast": "off",
+        "prefer-template": "off",
+        "no-script-url": "off",
+        "prefer-promise-reject-errors": "off",
+        "no-unused-expressions": "off",
+        "prefer-const": "warn",
+        "prefer-spread": "warn",
+        // "dot-notation": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "jsx-a11y/label-has-for": "off",
+        "jsx-a11y/iframe-has-title": "off",
+        "jsx-a11y/control-has-associated-label": "off",
+
+        "react/jsx-wrap-multilines": [
+            "error",
+            {
+                "declaration": "parens-new-line",
+                "assignment": "parens-new-line",
+                "return": "parens-new-line",
+                "arrow": "ignore",
+                "condition": "ignore",
+                "logical": "ignore",
+                "prop": "ignore"
+            }
+        ],
+        "react/jsx-filename-extension": "off",
+        "react/jsx-indent": "off",
+        "react/jsx-boolean-value": "off",
+        "react/jsx-closing-tag-location": "off",
+        "react/jsx-closing-bracket-location": ["warn", "tag-aligned"],
+        "react/prop-types": "off",
+        "react/button-has-type": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "react/jsx-curly-spacing": "off",
+        "react/no-access-state-in-setstate": "off",
+        "react/destructuring-assignment": "off",
+        "react/jsx-no-bind": "off",
+        "react/require-default-props": "off",
+        "react/display-name": "off",
+        "react/jsx-first-prop-new-line": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/static-property-placement": "off",
+        "react/state-in-constructor": "off",
+        "react/jsx-key": "warn",
+        "react/no-unescaped-entities": "off",
+
+        "sort-imports": "off",
+        "import/prefer-default-export": "off",
+        "import/no-useless-path-segments": "warn",
+        "import/no-unresolved": "off",
+        "import/no-extraneous-dependencies": "warn",
+        "import/no-named-as-default": "off",
+        "import/no-duplicates": "warn",
+        "import/order": [
+            "warn",
+            {
+                "groups": ["builtin", "external", "internal", ["sibling", "parent"]],
+                "newlines-between": "ignore"
+                // "alphabetize": {
+                // 	"order": "asc",
+                // 	"caseInsensitive": true
+                // }
+            }
+        ],
+        "import/newline-after-import": "warn",
+        "import/no-named-as-default-member": "off",
+        "import/namespace": "off",
+        "import/named": "off",
+
+        "@typescript-eslint/indent": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/member-delimiter-style": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/explicit-member-accessibility": "off", //["warn", { "accessibility": "no-public" }],
+        "@typescript-eslint/no-angle-bracket-type-assertion": "off",
+        "@typescript-eslint/array-type": "off",
+        "@typescript-eslint/no-inferrable-types": "warn",
+        "@typescript-eslint/no-extra-parens": [
+            "warn",
+            "all",
+            {
+                "conditionalAssign": false,
+                "nestedBinaryExpressions": false,
+                "ignoreJSX": "multi-line",
+                "enforceForArrowConditionals": true,
+                "enforceForSequenceExpressions": true
+            }
+        ],
+
+        "react-hooks/rules-of-hooks": "warn",
+        "react-hooks/exhaustive-deps": "off"
+    }
+}
